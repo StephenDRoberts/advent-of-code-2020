@@ -6,13 +6,12 @@ import java.io.File
 @Component
 class Puzzle2 {
 
-    val prefix = "/Users/sro01/Documents/002_PersonalCode/adventOfCode2020/src/main/kotlin/com/aoc/adventOfCode2020/inputs/"
-    val puzzle = "input1.txt"
+    fun findSolution(inputPuzzle: String): Int {
+        var answer = 0;
+        val prefix = "/Users/sro01/Documents/002_PersonalCode/adventOfCode2020/src/main/kotlin/com/aoc/adventOfCode2020/inputs/"
 
-    init {
-
-        val inputArray = readFileLineByLineUsingForEachLine("${prefix}${puzzle}")
-                .sortedDescending()
+        val inputArray = readFileLineByLineUsingForEachLine("${prefix}${inputPuzzle}")
+                        .sortedDescending()
 
         loop@ for(element in inputArray) {
             val initialSeed = element
@@ -24,13 +23,15 @@ class Puzzle2 {
                     val seedNumber = element
                     val seedSolution = filteredArray.find { it == newSolutionNumber - seedNumber }
                     if (seedSolution != null) {
+                        answer = initialSeed * seedNumber * seedSolution
                         println("Numbers: $initialSeed, $seedNumber, $seedSolution")
-                        println("Answer: ${initialSeed * seedNumber * seedSolution}")
+                        println("Answer: $answer")
                         break@loop
                     }
                 }
             }
         }
+        return answer
     }
 
     fun readFileLineByLineUsingForEachLine(fileName: String): List<Int> {
