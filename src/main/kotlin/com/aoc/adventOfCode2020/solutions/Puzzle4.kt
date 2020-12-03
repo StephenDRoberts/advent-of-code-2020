@@ -5,7 +5,7 @@
 //import kotlin.reflect.typeOf
 //
 //@Component
-//class Puzzle3 {
+//class Puzzle4 {
 //
 ////    fun findSolution(inputPuzzle: String) {
 //init {
@@ -22,8 +22,10 @@
 //    }
 //
 //    fun checkPassword(obj: PasswordObject): Boolean {
-//        val count = obj.password.chunked(1).count { it == obj.character }
-//        return count >= obj.minNum && count <= obj.maxNum
+//        val firstCheck = obj.password[obj.minNum-1].toString() == obj.character
+//        val secondCheck = obj.password[obj.maxNum-1].toString() == obj.character
+//
+//        return firstCheck != secondCheck
 //    }
 //
 //    fun readFileLineToPasswordType(fileName: String): List<PasswordObject> {
