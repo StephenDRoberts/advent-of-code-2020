@@ -8,7 +8,7 @@
 //class Puzzle5 {
 //    init {
 //        val prefix = "/Users/sro01/Documents/002_PersonalCode/adventOfCode2020/src/main/kotlin/com/aoc/adventOfCode2020/inputs/"
-//        val inputPuzzle = "input5.txt"
+//        val inputPuzzle = "inputDay3.txt"
 //        val pathRows = readFileLineByLineUsingForEachLine("${prefix}${inputPuzzle}")
 //        val route = Route(3,1)
 //

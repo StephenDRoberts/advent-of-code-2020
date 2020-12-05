@@ -9,7 +9,7 @@ internal class Puzzle1Test {
 
     @Test
     fun `should provide answer to puzzle`() {
-        val answer = underTest.findSolution("input1.txt")
+        val answer = underTest.findSolution("inputDay1.txt")
         assertThat(answer).isEqualTo(913824)
     }
 }

@@ -12,7 +12,7 @@
 //
 //
 //    val prefix = "/Users/sro01/Documents/002_PersonalCode/adventOfCode2020/src/main/kotlin/com/aoc/adventOfCode2020/inputs/"
-//    val inputPuzzle = "input3.txt"
+//    val inputPuzzle = "inputDay2.txt"
 //    val filepath = "${prefix}${inputPuzzle}"
 //
 //    val inputArray = readFileLineToPasswordType(filepath)
